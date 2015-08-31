@@ -1,0 +1,68 @@
+/**
+ * Navigation
+ */
+
+.navigation-menu {
+  
+  .menu {
+    
+    @include no-list;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: stretch;
+    
+    
+  }
+  
+  .menu-item { 
+    flex:  1 1 auto;
+  }
+  
+  a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .current_page_item > a,
+  .current-menu-item > a,
+  .current_page_ancestor > a { }
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block;
+}
+
+.menu-toggle {
+  display: none;
+  
+  @include media( $third-break ) { display: none; }
+}
+
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+  .site-main & {
+    margin: 0 0 1.5em;
+    overflow: hidden;
+  }
+
+  & .nav-previous {
+    width: 50%;
+    float: left;
+  }
+
+  & .nav-next {
+    width: 50%;
+    float: right;
+    
+    text-align: right;
+  }
+}
