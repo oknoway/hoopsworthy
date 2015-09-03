@@ -2,7 +2,46 @@
  * Navigation
  */
 
+.site-navigation {
+  @include no-list;
+  @include TradeGothicBC20;
+  
+  background-image: linear-gradient(to top, #850101 0%, #970011 99%, #970011 100%);
+  box-shadow: 0.4px 7px 11.8px 2.2px rgba(0, 0, 0, 0.19);
+  
+  text-transform: uppercase;
+  
+  @include media( $third-break ) {
+    
+    height: 65px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: stretch;
+    
+    height: 100%;
+    
+    > .widget_nav_menu {
+      flex: 1 1 auto;
+      
+      @include flex-fill;
+    }
+    
+    > .widget_wpcom_social_media_icons_widget {
+      flex: 0 1 auto;
+    }
+  }
+  
+}
+
 .navigation-menu {
+  @include flex-fill;
+
+  background-image: linear-gradient(to top, #c00 0%, #e50303 100%);
   
   .menu {
     
@@ -11,20 +50,23 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: flex-start;
-    justify-content: stretch;
+    align-items: stretch;
     
     
   }
   
   .menu-item { 
     flex:  1 1 auto;
+    
+    @include flex-center;
   }
   
   a {
     display: block;
     text-decoration: none;
     text-align: center;
+    
+    color: color( white );
   }
 
   .current_page_item > a,

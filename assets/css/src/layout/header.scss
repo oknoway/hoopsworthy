@@ -4,5 +4,17 @@
 
 .site-header {
   
+  background-color: color( white );
   text-align: center;
+  
+  .site-branding {
+    @include container;
+  }
+  
+  .site-title,
+  .site-description {
+    @include visuallyhidden;
+  }
+  
+  .widget { margin-bottom: 0; }
 }

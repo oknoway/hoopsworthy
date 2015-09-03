@@ -10,6 +10,8 @@
 
 html {
   box-sizing: border-box;
+  
+  
 }
 
 *,
@@ -21,6 +23,8 @@ html {
 // Elements
 body {
   background: color( background-body ); /* Fallback for when there is no custom background color defined. */
+  background-image: url(#{$img}/floor_sm.jpg);
+  //background-size: 234.5px 312.5px;
 }
 
 h1,

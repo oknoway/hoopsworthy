@@ -8,5 +8,12 @@
  ( function( window, undefined ) {
   'use strict';
 
-
+  var WebFontConfig = {
+    /*
+    google: {
+      families: ['Cardo', 'Raleway']
+    }
+    */
+  };
+  
  } )( this );

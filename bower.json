@@ -6,8 +6,8 @@
     "bourbon": "~4.2.4",
     "neat": "~1.7.2",
     "modernizr": "~2.8.3",
-    "responsive-nav": "~1.0.39",
-    "fitvids": "~1.1.0"
+    "fitvids": "~1.1.0",
+    "bower-webfontloader": "~1.5.16"
   },
   "ignore": [
     "node_modules",
@@ -33,6 +33,9 @@
     },
     "fitvids": {
       "js": "jquery.fitvids.js"
+    },
+    "bower-webfontloader": {
+      "js": "webfont.js"
     }
   }
 }

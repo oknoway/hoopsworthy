@@ -46,6 +46,32 @@
   }
 }
 
+// =Flexbox Mixins
+@mixin flex-fill {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: stretch;
+  
+  > * {
+    flex: 1 1 100%;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  
+  > * {
+    flex: 1 0 auto;
+  }
+}
+
+
 // =Utility Classes
 
 // Color Map Util
