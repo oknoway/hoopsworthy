@@ -41,7 +41,7 @@ module.exports = function( grunt ) {
             return dest.replace( '/js/', '/maps/' ) + '.map';
           },
           mangle: {
-            except: [ 'jQuery' ]
+            except: [ 'jQuery', '<%= dirs.js %>/src/hoopsworthy/webfont.js' ]
           }
         }
       }

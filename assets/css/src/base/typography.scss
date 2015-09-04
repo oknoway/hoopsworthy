@@ -2,6 +2,22 @@
  * Typography
  */
 
+%h1 {}
+
+%h2 {}
+
+%h3 {}
+
+%h4 {
+  @include TradeGothic20;
+  
+  font-size: em( 20 );
+}
+
+%h5 {}
+
+%h6 {}
+
 html { font-size: 100%; }
 
 body,
@@ -9,10 +25,40 @@ button,
 input,
 select,
 textarea {
+  @include TradeGothicLt;
+
   color: copy( text-main );
-  
-  //@include Gotham;
-  font-family: sans-serif;
+
   font-size: $base-font-size;
   line-height: $base-line-height;
+}
+
+h1 {
+  @extend %h1;
+  
+}
+
+h2 {
+  @extend %h2;
+  
+}
+
+h3 {
+  @extend %h3;
+  
+}
+
+h4 {
+  @extend %h4;
+  
+}
+
+h5 {
+  @extend %h5;
+  
+}
+
+h6 {
+  @extend %h6;
+  
 }

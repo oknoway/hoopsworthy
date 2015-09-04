@@ -2,21 +2,58 @@
  * Font Face
  */
 
-@mixin TradeGothicBC18 {
-  font-weight: 500;
-  font-family: sans-serif;
-  font-style: normal;
-}
-
-@mixin TradeGothicBC20 {
-  font-weight: 600;
-  font-family: sans-serif;
-  font-style: normal;
-  
-}
-
-@mixin TradeGothicLtReg {
+@font-face {
+  font-family: "TradeGothic";
+  src: url('../fonts/TradeGothicLT-Light.eot?#iefix');
+  src: url('../fonts/TradeGothicLT-Light.eot?#iefix') format( 'eot' ),
+       url('../fonts/TradeGothicLT-Light.woff2?#iefix') format( 'woff2' ),
+       url('../fonts/TradeGothicLT-Light.woff?#iefix') format( 'woff' ),
+       url('../fonts/TradeGothicLT-Light.ttf?#iefix') format( 'truetype' );
   font-weight: 300;
-  font-family: sans-serif;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "TradeGothic";
+  src: url('../fonts/TradeGothicLTPro-Cn18.eot?#iefix');
+  src: url('../fonts/TradeGothicLTPro-Cn18.eot?#iefix') format( 'eot' ),
+       url('../fonts/TradeGothicLTPro-Cn18.woff2?#iefix') format( 'woff2' ),
+       url('../fonts/TradeGothicLTPro-Cn18.woff?#iefix') format( 'woff' ),
+       url('../fonts/TradeGothicLTPro-Cn18.ttf?#iefix') format( 'truetype' );
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TradeGothic";
+  src: url('../fonts/TradeGothicLTPro-BdCn20.eot?#iefix');
+  src: url('../fonts/TradeGothicLTPro-BdCn20.eot?#iefix') format( 'eot' ),
+       url('../fonts/TradeGothicLTPro-BdCn20.woff2?#iefix') format( 'woff2' ),
+       url('../fonts/TradeGothicLTPro-BdCn20.woff?#iefix') format( 'woff' ),
+       url('../fonts/TradeGothicLTPro-BdCn20.ttf?#iefix') format( 'truetype' );
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin TradeGothic {
+  font-family: 'TradeGothic',sans-serif;
+  font-style: normal;
+}
+
+@mixin TradeGothic18 {
+  @include TradeGothic;
+  
+  font-weight: 500;
+}
+
+@mixin TradeGothic20 {
+  @include TradeGothic;
+
+  font-weight: 600;
+}
+
+@mixin TradeGothicLt {
+  @include TradeGothic;
+
+  font-weight: 300;
 }
