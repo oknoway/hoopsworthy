@@ -1,0 +1,69 @@
+/**
+ * Archive ( Home )
+ */
+
+.archive {
+  
+  
+  .post {
+    position: relative;
+    
+    margin-bottom: $gutter;
+    
+    .entry-header {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      
+      @include pad( 1em 2em );
+      
+      background-color: rgba( color( black ), 0.79 );
+      color: color( white );
+      
+      .entry-title,
+      .entry-subhead {
+        margin: 0.15em 0;
+      }
+      
+    }
+    
+    
+    .entry-content {
+      //position: absolute;
+      //top: 0;
+      //right: 0;
+      //bottom: 0;
+      
+      margin: 0;
+    }
+    
+    
+    .entry-footer {
+      
+      .tag-link {
+        @extend %h6;
+        
+        position: absolute;
+        top: 22px;
+        left: -18px;
+        
+        @include pad( 0.5em 1em );
+        
+        background-color: color( red );
+        background-image: linear-gradient(to right, #cb0000 0%, color( red ) 100%);
+        color: color( white );
+        
+        line-height: 1.1;
+      }
+      
+    }
+    
+    a {
+      color: inherit;
+      
+      text-decoration: none;
+    }
+  }
+  
+}

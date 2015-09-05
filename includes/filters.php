@@ -94,3 +94,30 @@ if ( ! function_exists( 'hoopsworthy_wp_nav_menu_args' ) ) :
 endif; // excerpt_length
 
 add_filter( 'wp_nav_menu_args', 'hoopsworthy_wp_nav_menu_args' );
+
+
+if ( ! function_exists( 'hoopsworthy_oembed_result' ) ) :
+
+  /**
+   * Better defaults for wp_nav_menu
+   *
+   * @param $args (array)
+   *
+   * @return $args (array)
+   *
+   * @since 0.1.0
+   */
+
+  function hoopsworthy_oembed_result( $html, $url, $args ) {
+
+    if ( strpos( $html, 'youtu.be' ) !== false || strpos( $html, 'youtube.com' ) !== false ) {
+      $html = preg_replace( "@src=(['\"])?([^'\">\s]*)@", "src=$1$2&modestbranding=1&vq=hd720&rel=0&showsearch=0&showinfo=0", $html);
+    }
+
+    return $html;
+  }
+  
+endif; // excerpt_length
+
+add_filter( 'embed_oembed_html', 'hoopsworthy_oembed_result', 10, 3 );
+add_filter( 'oembed_result', 'hoopsworthy_oembed_result', 10, 3 );

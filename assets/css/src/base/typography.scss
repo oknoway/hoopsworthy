@@ -2,7 +2,13 @@
  * Typography
  */
 
-%h1 {}
+%h1 {
+  @include TradeGothic20;
+  
+  font-size: em( 40 );
+  line-height: 1;
+  text-transform: uppercase;
+}
 
 %h2 {}
 
@@ -14,9 +20,19 @@
   font-size: em( 20 );
 }
 
-%h5 {}
+%h5 {
+  @include TradeGothic18;
+  
+  font-size: em( 20 );
+  text-transform: uppercase;
+}
 
-%h6 {}
+%h6 {
+  @include TradeGothic18;
+  
+  font-size: em( 16 );
+  text-transform: uppercase;
+}
 
 html { font-size: 100%; }
 
