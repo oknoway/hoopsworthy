@@ -53,6 +53,7 @@ function hoopsworthy_setup() {
   // This theme uses wp_nav_menu() in one location.
   register_nav_menus( array(
     'header' => esc_html__( 'Header Menu', 'hoopsworthy' ),
+    'footer' => esc_html__( 'Footer Menu', 'hoopsworthy' ),
   ) );
 
   /*

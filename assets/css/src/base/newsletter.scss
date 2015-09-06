@@ -1,0 +1,46 @@
+/**
+ * Newsletter
+ */
+
+.gform_wrapper {
+  
+  form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: stretch;
+    
+    > * {
+      flex: 0 1 auto;
+    }
+    
+    .gform_body {
+      flex: 1 1 100%;
+    }
+    
+    .gform_footer { padding-bottom: 0; }
+    
+    .gfield_description,
+    .gfield_label .gfield_required {
+      @include visuallyhidden;
+    }
+    
+    .gfield_label {
+      @extend %h4;
+      
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    
+    
+    
+    .top_label input[type="text"].medium {
+      width: 100%;
+      
+      line-height: 1.4;
+    }
+  }
+  
+  
+}

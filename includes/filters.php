@@ -81,7 +81,7 @@ if ( ! function_exists( 'hoopsworthy_wp_nav_menu_args' ) ) :
     $args['container'] = 'nav';
     $args['container_class'] = 'navigation-menu';
 
-    if ( 'Social' == $args['menu']->name ) :
+    if ( isset( $args['menu']->name ) && ( 'Social' == $args['menu']->name ) ) :
       
       // Except for the social menu, because it's not navigation
       $args['container'] = 'div';

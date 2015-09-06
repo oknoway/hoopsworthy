@@ -6,15 +6,53 @@
   margin-bottom: $gutter;
   
   background-color: color( black );
+  color: color( white );
+  
   text-align: center;
   
   .site-branding {
     @include container;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    
+    max-height: 234px;
+    
+    > a {
+      flex: 1 1 auto;
+    }
   }
   
-  .site-title,
-  .site-description {
+  .hoopsworthy-logo {
+    position: relative;
+    display: block;
+    height: calc( 100% -35px );
+    max-height: 234px;
+    
+    > * {
+    }
+  }
+  
+  .site-title {
     @include visuallyhidden;
+    
+    
+  }
+  
+  .site-description {
+    flex: 0 1 auto;
+    
+    font-size: 10px;
+    line-height: 1.5;
+    text-align: left;
+    
+    span {
+      display: block;
+      
+      text-transform: uppercase;
+    }
   }
   
   .widget { margin-bottom: 0; }

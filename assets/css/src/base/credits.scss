@@ -1,0 +1,34 @@
+/**
+ * Credits
+ */
+
+
+.hof {
+  
+  a {
+    display: inline-block;
+    min-width: 170px;
+    padding-top: 185px;
+    
+    background-image: url(#{$img}/logo_hof.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    
+    text-transform: lowercase;
+    text-align: center;
+  }
+}
+
+.nike {
+  
+  font-size: 12px;
+  text-transform: uppercase;
+  
+  .icon-nike {
+    display: inline-block;
+    
+    height: 43px;
+    width: 127px;
+    margin-left: 40px;
+  }
+}
