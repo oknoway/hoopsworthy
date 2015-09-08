@@ -9,13 +9,20 @@
 // =Site Mixins
 
 @mixin container {
-  max-width: $max-width;
+  width: 100%;
+  //max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding-right: $half-gutter;
+  padding-left: $half-gutter;
   
   @at-root .no-mediaqueries & {
-    padding-right: $half-gutter;
-    padding-left: $half-gutter;
+  }
+  
+  @include media( $fifth-break ) {
+    max-width: $max-width;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

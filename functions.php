@@ -81,7 +81,9 @@ function hoopsworthy_setup() {
   /**
    * Custom image sizes
    */
-  //add_image_size( 'hero', 1400, 788, true );
+  add_image_size( 'hero', 2000, 1206, true ); // desktop hero
+  add_image_size( 'hero-med', 1280, 772, true ); // tablet hero
+  add_image_size( 'hero-sm', 768, 463, true ); // mobile hero
   
   /**
    * Remove extraneous things
@@ -153,7 +155,7 @@ if ( ! function_exists( 'hoopsworthy_scripts_styles' ) ) :
       wp_enqueue_style( 'hoopsworthy-style', get_template_directory_uri() . "/assets/css/hoopsworthy.css", array(), VERSION, 'all' );
 
       wp_enqueue_script( 'hoopsworthy-head', get_template_directory_uri() . "/assets/js/head.js", array(), VERSION, false );
-      wp_enqueue_script( 'hoopsworthy', get_template_directory_uri() . "/assets/js/hoopsworthy.js", array(), VERSION, true );
+      wp_enqueue_script( 'hoopsworthy', get_template_directory_uri() . "/assets/js/hoopsworthy.js", array( 'jquery' ), VERSION, true );
       
       $wpURLs = array(
         'template_directory_uri' => get_template_directory_uri(),

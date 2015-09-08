@@ -4,6 +4,14 @@
 
 .gform_wrapper {
   
+  padding-left: $half-gutter;
+  padding-right: $half-gutter;
+  
+  @include media( $third-break ) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
   form {
     display: flex;
     flex-direction: row;

@@ -3,7 +3,6 @@
  */
 
 .site-navigation {
-  @extend %h4;
   
   @include no-list;
   
@@ -34,29 +33,45 @@
     }
     
     > .widget_wpcom_social_media_icons_widget {
-      flex: 0 1 auto;
+      display: none;
+      
+      @include media( $third-break ) {
+        flex: 0 1 auto;
+        
+        display: flex;
+      }
     }
   }
   
 }
 
 .navigation-menu {
+  @extend %h4;
+  
+  
   .menu {
     
     @include no-list;
     
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: stretch;
     
     
+    @include media( third-break ) {
+      flex-wrap: nowrap;
+    }
   }
   
   .menu-item { 
-    flex:  1 1 auto;
+    flex:  1 0 33%;
     
     @include flex-center;
+    
+    @include media( $third-break ) {
+      flex: 1 1 auto;
+    }
   }
   
   a {
@@ -83,7 +98,15 @@
 
 
 .site-footer .navigation-menu {
+  
+  margin-bottom: 2em;
+  
+  @include media( $third-break ) {
+    margin-bottom: 0;
+  }
+  
   .menu {
+    flex-wrap: nowrap;
     justify-content: center;
     
     .menu-item { flex: 0 1 auto; }
@@ -110,6 +133,7 @@
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
+  @extend %h4;
 
   .site-main & {
     margin: 0 0 1.5em;
@@ -127,4 +151,6 @@
     
     text-align: right;
   }
+  
+  a { color: color( black ); }
 }

@@ -102,3 +102,47 @@ if ( ! function_exists( 'get_the_slug' ) ) :
   }
   
 endif; // get_the_slug
+
+
+if ( ! function_exists( 'bg_img_styles' ) ) :
+  /**
+   * Get a block of responsive background image styles, scoped to the post id.
+   *
+   * @param $id - post id
+   *
+   * @param $sizes - array of registered image sizes as strings, passed directly to get_attachment_sizes
+   *
+   * @return string
+   *
+   * @since 0.1.0
+   */
+
+  function bg_img_styles( $id, $sizes ) {
+  
+    // get images
+    $images = get_attachment_sizes( get_post_thumbnail_id( $id ), $sizes );
+
+    // determine largest size available
+    $widths = wp_list_pluck( $images, '1' );
+    $biggest = array_search( max( $widths ), $widths );
+  
+    $style = '<style>' . "\n";
+
+    foreach ( $images as $size=>$image ) :
+    
+      $media_feature = ( $size == $biggest ) ? 'min-width' : 'max-width';
+    
+      $style .= '@media screen and (' . $media_feature . ':' . $images[ $size ][1] . 'px) {' . "\n";
+
+      $style .= '#post-' . $id . ' { background-image:url(' . $images[ $size ][0] . '); }' . "\n";
+
+      $style .= '}' . "\n";
+
+    endforeach;
+
+    $style .= '</style>' . "\n";
+    
+    return $style;
+
+  }
+endif; // bg_img_styles

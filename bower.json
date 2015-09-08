@@ -2,11 +2,12 @@
   "name": "hoopsworthy",
   "version": "0.1.0",
   "dependencies": {
-    "wp-normalize.scss": "~1.0.2",
     "bourbon": "~4.2.4",
-    "neat": "~1.7.2",
+    "fitvids": "~1.1.0",
+    "masonry": "~3.3.2",
     "modernizr": "~2.8.3",
-    "fitvids": "~1.1.0"
+    "neat": "~1.7.2",
+    "wp-normalize.scss": "~1.0.2"
   },
   "ignore": [
     "node_modules",
@@ -25,6 +26,9 @@
     },
     "modernizr": {
       "modernizr": "modernizr.js"
+    },
+    "masonry": {
+      "js": "dist/masonry.pkgd.js"
     },
     "responsive-nav": {
       "scss": "*.css",

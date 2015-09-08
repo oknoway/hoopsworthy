@@ -121,3 +121,34 @@ endif; // excerpt_length
 
 add_filter( 'embed_oembed_html', 'hoopsworthy_oembed_result', 10, 3 );
 add_filter( 'oembed_result', 'hoopsworthy_oembed_result', 10, 3 );
+
+
+if ( ! function_exists( 'hoopsworthy_home_filter' ) ):
+  
+  /**
+   * No pagination on the home page
+   *
+   * @since 0.1.0
+   */
+  function hoopsworthy_home_filter($query) {
+    
+    if ( is_admin() )
+      return $query;
+    
+    if ( !$query->is_main_query() )
+      return $query;
+
+      
+    if ( is_front_page() ) :
+      
+      // Only show sticky posts on the front page
+      //$query->set( 'posts_per_page', -1 );
+      
+    endif;
+
+    return $query;
+  }
+  
+endif; // hoopsworthy_home_filter
+
+add_filter( 'pre_get_posts', 'hoopsworthy_home_filter' );

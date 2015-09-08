@@ -35,14 +35,13 @@ module.exports = function( grunt ) {
             ' * <%= pkg.homepage %>\n' +
             ' * Copyright (c) <%= grunt.template.today("yyyy") %>;' +
             ' */\n',
+          screwIE8: true,
           sourceMap: true,
           sourceMapIncludeSources: true, 
           sourceMapName: function( dest ) {
             return dest.replace( '/js/', '/maps/' ) + '.map';
           },
-          mangle: {
-            except: [ 'jQuery', '<%= dirs.js %>/src/hoopsworthy/webfont.js' ]
-          }
+          mangle: false
         }
       }
     },

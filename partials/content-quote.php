@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts.
+ * Template part for displaying quotes.
  *
  * @package hoopsworthy
  */
@@ -22,7 +22,11 @@
       // images
       if ( get_field( 'instagram_url' ) ) :
         
-        echo wp_oembed_get( get_field( 'instagram_url' ) );
+        remove_filter( 'the_content', 'wpautop' );
+        
+        echo apply_filters( 'the_content', get_field( 'instagram_url' ) );
+
+        add_filter( 'the_content', 'wpautop' );
 
       // video
       elseif ( get_field( 'video_embed_url' ) ) :
@@ -35,7 +39,7 @@
         // featured image
         elseif( has_post_thumbnail() ) :
           
-          get_template_part( 'partials/module', 'hero' );
+          the_post_thumbnail();
           
         // content
         //else :

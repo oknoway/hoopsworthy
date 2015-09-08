@@ -2,5 +2,5 @@
  * http://www.hoopsworthy.com
  * Copyright (c) 2015; */
 
-!function(a,b){"use strict"}(this);
+!function(window,undefined){"use strict"}(this);
 //# sourceMappingURL=../maps/admin.js.map
