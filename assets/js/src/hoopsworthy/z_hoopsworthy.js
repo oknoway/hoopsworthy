@@ -41,7 +41,7 @@
 
   // fitvids
   
-  jQuery( '.entry-content' ).fitVids();
+  jQuery( '.entry-content, .entry-media' ).fitVids();
 
   // Masonry
   
