@@ -8,10 +8,13 @@
   .site-main {
     
     > .post {
+      
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
     
-      @include span-columns( 12 );
-    
-      height: 450px;
+      //height: 450px;
     
       width: 100%;
     
@@ -22,11 +25,16 @@
         min-height: none;
       }
     
+      > * {
+        flex: 1 1 auto;
+      }
+    
     
       @include media( $third-break ) {
-      
+        
         flex: none;
-      
+        
+        display: block;
         width: flex-grid( 3, 12 );
       
         margin-bottom: flex-gutter();
@@ -35,12 +43,25 @@
         
           //width: flex-grid( 9, 12 );
           height: auto;
-          
-          .entry-content {
-            .fluid-width-video-wrapper {
-              position: static !important;
-            }
+          max-height: none;
+                    
+          &:nth-of-type( 1 ),
+          &:nth-of-type( 6 ) {
+            height: 675px;
           }
+          
+          &:nth-of-type( 2 ),
+          &:nth-of-type( 3 ),
+          &:nth-of-type( 4 ),
+          &:nth-of-type( 5 ),
+          &:nth-of-type( 7 ),
+          &:nth-of-type( 8 ),
+          &:nth-of-type( 9 ),
+          &:nth-of-type( 10 ) {
+        
+            height: 450px;
+          }
+          
         }
       
         &.format-image {
@@ -61,7 +82,7 @@
         &:nth-of-type( 5 ) {
           @include span-columns( 6 );
         
-          max-height: 450px;
+          height: 450px;
 
           .entry-header { font-size: 75%; }
         }
@@ -72,7 +93,7 @@
         &:nth-of-type( 10 ) {
           @include span-columns( 4.5 );
         
-          max-height: 450px;
+          height: 450px;
 
           .entry-header { font-size: 75%; }
         }
@@ -101,21 +122,28 @@
   
   
   .post {
+    
+    
     position: relative;
     
     margin-bottom: $gutter;
     
+    
     .entry-header {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 2;
+      order: 2;
       
       @include pad( 1em 2em );
       
       background-color: rgba( color( black ), 0.79 );
       color: color( white );
+      
+      @include media( $third-break ) {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+      }
       
       .entry-title,
       .entry-subhead {
@@ -130,15 +158,32 @@
     
     
     .entry-content {
+      order: 1;
 
-      height: 100%;
+      //max-height: 450px;
       width: 100%;
       margin: 0;
       
-      .hero {
+      @include media( $third-break ) {
         height: 100%;
+      }
+      
+      .hero {
+        height: 450px;
+        max-height: none;
         width: 100%;
         margin: 0;
+        
+        @include media( $third-break ) {
+          height: 100%;
+        }
+      }
+      
+      .fluid-width-video-wrapper {
+        
+        @include media( $third-break ) {
+          position: static !important;
+        }
       }
     }
     
@@ -151,6 +196,7 @@
         position: absolute;
         top: 22px;
         left: -18px;
+        z-index: 2;
         
         @include pad( 0.5em 1em );
         

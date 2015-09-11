@@ -19,7 +19,7 @@
   @at-root .no-mediaqueries & {
   }
   
-  @include media( $fifth-break ) {
+  @include media( $sixth-break ) {
     max-width: $max-width;
     padding-left: 0;
     padding-right: 0;
