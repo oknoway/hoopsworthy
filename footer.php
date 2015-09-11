@@ -26,10 +26,10 @@
           gravity_form( 'Newsletter Signup', false, false, false, '', true, -1, true ); ?>
     
         <span class="copyright">Copyright &copy;<?php echo date('Y') ?>, Basketball Hall of Fame. All rights reserved.</span>
-    
+        <!--
         <div class="nike">
           <a href="http://www.nike.com" target="_blank"><span class="txt">Sponsored by</span><span class="icon icon-nike"><?php echo file_get_contents( get_template_directory() . '/img/logo_nike.svg' ); ?></span></a>
-        </div>
+        </div>-->
       </div>
     </div>
   </footer><!-- #colophon -->
