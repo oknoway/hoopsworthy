@@ -27,7 +27,7 @@
     <div class="site-branding">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="hoopsworthy-logo"><?php echo file_get_contents( get_template_directory() . '/img/hoopsworthy_logo_tm.svg' ); ?></span></a>
       <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-      <p class="site-description">Presented by the<span>Naismith Memorial <br>Basketball Hall of Fame</span></p>
+      <p class="site-description">Presented by the <span>Naismith Memorial <br>Basketball Hall of Fame</span></p>
     </div><!-- .site-branding -->
     <div class="site-navigation">
       <div class="container">
