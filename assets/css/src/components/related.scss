@@ -1,0 +1,28 @@
+/**
+ * Related
+ */
+
+.related-posts {
+  @include no-list;
+  
+  
+  .post {
+    
+    .entry-title a {
+      color: color( white );
+    }
+    
+    .entry-content {
+      padding-left: 0;
+      padding-right: 0;
+      
+      .hero {
+        height: 450px;
+        max-height: none;
+        width: 100%;
+      }
+    }
+  }
+  
+  
+}

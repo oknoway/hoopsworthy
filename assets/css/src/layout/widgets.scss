@@ -9,15 +9,6 @@
   select {
     max-width: 100%;
   }
-}
-
-/* Search widget. */
-.widget_search .search-submit {
-  display: none;
-}
-
-/* Twitter Timeline widget. */
-.widget_twitter_timeline {
   
   .widget-title {
     @extend %h1;
@@ -31,4 +22,14 @@
     line-height: 1;
     text-transform: uppercase;
   }
+}
+
+/* Search widget. */
+.widget_search .search-submit {
+  display: none;
+}
+
+/* Twitter Timeline widget. */
+.widget_twitter_timeline {
+  
 }

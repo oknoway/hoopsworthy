@@ -6,7 +6,7 @@
   
   @include no-list;
   
-  background-image: linear-gradient( to right, transparent 50%, #1d1d1d 51%, #1d1d1d 100%), linear-gradient(to top, #850101 0%, #970011 99%, #970011 100%);
+  background-image: linear-gradient( to right, transparent 50%, #000 51%, #000 100%), linear-gradient(to top, #850101 0%, #970011 99%, #970011 100%);
   box-shadow: 0.4px 7px 11.8px 2.2px rgba(0, 0, 0, 0.19);
   
   text-transform: uppercase;
@@ -34,6 +34,8 @@
     }
     
     > .widget_wpcom_social_media_icons_widget {
+      flex: 1 1 100%;
+      
       display: none;
       
       @include media( $third-break ) {
@@ -43,7 +45,6 @@
       }
     }
   }
-  
 }
 
 .navigation-menu {
@@ -80,7 +81,6 @@
     text-align: center;
     text-transform: uppercase;
   }
-  
 }
 
 .site-header .navigation-menu {
@@ -90,7 +90,8 @@
 
   background-image: linear-gradient(to top, #c00 0%, #e50303 100%);
   
-  &:before {
+  &:before,
+  &:after {
     content: '';
     
     position: absolute;
@@ -98,12 +99,23 @@
     height: 100%;
     width: 22px;
     
+    background-repeat: no-repeat;
+  }
+  
+  &:before {
     background-image: url(#{$img}/nav_before.svg);
     background-position: 100% -1px;
-    background-repeat: no-repeat;
     background-size: cover;
   }
   
+  &:after {
+    right: -1px;
+    z-index: 2;
+    
+    background-image: url(#{$img}/search_before.svg);
+    background-position: 0;
+    background-size: 100%;
+  }
   
   a { color: color( white ); }
 

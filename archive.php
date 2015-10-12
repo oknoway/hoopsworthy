@@ -33,7 +33,7 @@ get_header(); ?>
 
           get_template_part( 'partials/content', get_post_format() );
           
-          if ( ( is_front_page() || is_home() ) && ( $i == 8 ) )
+          if ( ( is_front_page() || is_home() ) && ( $i == 1 ) )
             dynamic_sidebar( 'Home' ); ?>
 
       <?php endwhile; ?>
