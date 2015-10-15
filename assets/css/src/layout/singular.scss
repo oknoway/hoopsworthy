@@ -66,6 +66,7 @@
       flex: 1 0 100%;
     }
     
+    
     .entry-header {
       order: 2;
       
@@ -85,6 +86,11 @@
       .hero {
         height: 100%;
         margin: 0;
+      }
+      
+      .instagram-media {
+        max-height: 100%;
+        
       }
     }
     
@@ -143,5 +149,12 @@
         }
       }
     }
+    
+    &.has-instagram-img {
+      .entry-media {
+        min-height: 800px;
+      }
+    }
+    
   }
 }

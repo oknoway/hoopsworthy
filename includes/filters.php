@@ -56,6 +56,9 @@ if ( ! function_exists( 'hoopsworthy_post_class' ) ) :
     if ( !empty( $fields[ 'gallery' ] ) || has_post_thumbnail( $post->ID ) )
       $classes[] = 'has-post-img';
 
+    if ( !empty( $fields[ 'instagram_url' ] ) )
+      $classes[] = 'has-instagram-img';
+
     return $classes;
   }
 endif; // hoopsworthy_post_class
