@@ -35,6 +35,7 @@
         flex: none;
         
         display: block;
+        height: 450px;
         width: flex-grid( 3, 12 );
       
         margin-bottom: flex-gutter();
@@ -42,24 +43,8 @@
         &.format-video {
         
           //width: flex-grid( 9, 12 );
-          height: auto;
+          height: 450px;
           max-height: none;
-                    
-          &:nth-of-type( 4 ) {
-            height: 675px;
-          }
-          
-          &:nth-of-type( 2 ),
-          &:nth-of-type( 3 ),
-          &:nth-of-type( 5 ),
-          &:nth-of-type( 6 ),
-          &:nth-of-type( 7 ),
-          &:nth-of-type( 8 ),
-          &:nth-of-type( 9 ),
-          &:nth-of-type( 10 ) {
-        
-            height: 450px;
-          }
           
         }
       
@@ -67,35 +52,24 @@
           //width: flex-grid( 6, 12 );
         }
       
-        &:nth-of-type( 4 ) {
-          @include span-columns( 12 );
-        
-          height: 675px;
-        }
         
         &:nth-of-type( 1 ),
-        &:nth-of-type( 5 ),
-        &:nth-of-type( 6 ) {
-          @include span-columns( 6 );
-        
-          height: 450px;
-
-          .entry-header { font-size: 75%; }
-        }
-      
+        &:nth-of-type( 4 ),
         &:nth-of-type( 7 ),
         &:nth-of-type( 8 ),
         &:nth-of-type( 9 ),
         &:nth-of-type( 10 ) {
           @include span-columns( 6 );
         
-          height: 450px;
+          //height: 450px;
 
           .entry-header { font-size: 75%; }
         }
       
         &:nth-of-type( 2 ),
-        &:nth-of-type( 3 ) {
+        &:nth-of-type( 3 ),
+        &:nth-of-type( 5 ),
+        &:nth-of-type( 6 ) {
           @include direction-context(right-to-left) {
             @include media( $third-break ) {
               @include span-columns( 3 );
@@ -188,13 +162,12 @@
     
     
     &.format-video {
-      overflow-y: hidden;
       
       &:hover,
       &:focus {
         
         .entry-header {
-          transform: translateY( 100% );
+          opacity: 0;
           
         }
       }
