@@ -155,3 +155,18 @@ if ( ! function_exists( 'hoopsworthy_home_filter' ) ):
 endif; // hoopsworthy_home_filter
 
 add_filter( 'pre_get_posts', 'hoopsworthy_home_filter' );
+
+
+
+function append_query_string($url) {
+  if ( has_post_format( 'link' ) && get_field( 'url' ) ) :
+    return get_field( 'url' );
+  else :
+    return $url;
+  endif;
+    
+
+}
+//add_filter('get_permalink', 'append_query_string');
+//add_filter('the_permalink', 'append_query_string');
+

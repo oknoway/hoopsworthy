@@ -8,7 +8,10 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <header class="entry-header">
-    <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+    <?php 
+    $permalink = ( has_post_format( 'link' ) && get_field( 'url' ) ) ? get_field( 'url' ) : get_permalink();
+    
+    the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( $permalink ) ), '</a></h1>' ); ?>
     
     <?php if ( get_field( 'subhead' ) ) : ?>
       <h5 class="entry-subhead"><?php the_field( 'subhead' ); ?></h5>

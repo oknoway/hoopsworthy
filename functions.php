@@ -76,6 +76,7 @@ function hoopsworthy_setup() {
     'image',
     'video',
     'quote',
+    'link',
   ) );
   
   /**
