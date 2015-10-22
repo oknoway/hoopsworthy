@@ -17,6 +17,7 @@
     <?php endif; ?>
     
     <div class="entry-meta">
+      <?php the_tags( '<ul class="post-tags"><li>', '</li><li>', '</li></ul>' ); ?>
       <?php hoopsworthy_posted_on(); ?>
     </div><!-- .entry-meta -->
   </header><!-- .entry-header -->

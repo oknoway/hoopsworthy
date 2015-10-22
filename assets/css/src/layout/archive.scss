@@ -278,6 +278,9 @@
   
     &.format-image {
       .entry-content {
+        
+        overflow: hidden;
+        
         iframe {
           height: 100%;
         }
