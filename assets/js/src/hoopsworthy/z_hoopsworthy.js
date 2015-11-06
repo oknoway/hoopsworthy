@@ -21,22 +21,35 @@
    * Lazy Loading
    */
   
+  var loadDelayediFrame = function( el ) {
+    
+    var src = jQuery( el ).data( 'src' );
+  
+    jQuery( el ).attr( 'src', src );
+  }
+  
+  var loadDelayedImg = function( el ) {
+
+    var bgImg = jQuery( el ).data( 'delayed-background-image' );
+
+    jQuery( el ).css( 'background-image', 'url(' + bgImg + ')' );
+  }
+  
+  
   jQuery( '.delayed' ).each( function( ) {
     
-    //console.log( $(this).data( 'delayed-background-image' ) );
+    var el = jQuery( this );
     
     if ( jQuery( this ).is('iframe') ) {
       
-      jQuery(this).attr( 'src', jQuery(this).data( 'src' ) );
+      setTimeout( loadDelayediFrame( el ), 50 );
       
     } else {
       
-      jQuery(this).css( 'background-image', 'url(' + jQuery(this).data( 'delayed-background-image' ) + ')' );
+      setTimeout( loadDelayedImg( el ), 50 );
     
     }
-    
   });
-
 
 
   // fitvids
