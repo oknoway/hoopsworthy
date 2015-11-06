@@ -14,7 +14,7 @@
   <footer id="colophon" class="site-footer" role="contentinfo">
     <div class="container">
       <div class="hof">
-        <a href="http://www.hoopshall.com" target="_blank">www.hoopshall.com</a>
+        <a href="http://www.hoophall.com" target="_blank">www.hoophall.com</a>
       </div>
       <nav id="footer-navigation" class="footer-navigation" role="navigation">
         <?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu' ) ); ?>
